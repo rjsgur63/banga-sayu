@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171b18">
+  <title>반가워, 사유</title>
+  <meta name="description" content="금동 반가사유상을 몸과 소리로 만나는 웹 게임. HCI 설계 D조.">
+  <meta property="og:title" content="반가워, 사유">
+  <meta property="og:description" content="흠을 지우려는 수집가에 맞서, 사유가 겪은 일을 몸으로 겪는 웹 게임. 설치 없이 바로 시작합니다.">
+  <style>
+    :root {
+      --bg: #171b18; --panel: #22201b; --line: #4a4033; --text: #f6f3ee; --sub: #cfc6b8;
+      --gold: #c9a46a; --gold-strong: #e3c48f; --focus: #ffd98a;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--bg); }
+    body {
+      margin: 0; min-height: 100vh; color: var(--text); background: radial-gradient(ellipse at 50% 0%, #2c261d 0%, var(--bg) 65%);
+      font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; line-height: 1.6;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .skip { position: absolute; left: 16px; right: 16px; top: 12px; padding: 10px 16px; background: var(--gold); color: #1a1510; border-radius: 8px; font-weight: 700; text-decoration: none; z-index: 2; transform: translateY(calc(-100% - 24px)); }
+    .skip:focus { transform: none; outline: 3px solid var(--focus); outline-offset: 2px; }
+    main { width: 100%; max-width: 760px; padding: 56px 16px 40px; }
+    .eyebrow { margin: 0; color: var(--gold); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; }
+    h1 { margin: 6px 0 10px; font-family: "Batang", "Nanum Myeongjo", "Noto Serif KR", serif; font-size: clamp(2.2rem, 7vw, 3.4rem); line-height: 1.15; }
+    .lead { margin: 0 0 32px; color: var(--sub); font-size: 1.05rem; }
+    h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+    ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+    a.card {
+      display: block; padding: 22px 22px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--panel);
+      color: var(--text); text-decoration: none; transition: border-color .15s, transform .15s;
+    }
+    a.card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    a.card:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    .name { display: block; font-size: 1.45rem; font-weight: 700; }
+    .meta { display: block; margin-top: 2px; color: var(--gold-strong); font-weight: 700; font-size: 0.95rem; }
+    .desc { display: block; margin-top: 10px; color: var(--sub); }
+    .go { display: inline-block; margin-top: 14px; padding: 8px 16px; border-radius: 999px; background: var(--gold); color: #1a1510; font-weight: 700; }
+    .note { margin: 28px 0 0; color: var(--sub); font-size: 0.92rem; }
+    footer { width: 100%; max-width: 760px; padding: 0 16px 32px; color: #a89f92; font-size: 0.85rem; }
+    @media (prefers-reduced-motion: reduce) { a.card { transition: none; } a.card:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="시각장애인판/">화면 낭독기를 쓰시나요? 소리로 만나는 판으로 바로 가기</a>
+  <main>
+    <p class="eyebrow">HCI 설계 · D조</p>
+    <h1>반가워, 사유</h1>
+    <p class="lead">1,400년 전 불 속에서 흠을 얻고 태어난 금동 반가사유상 ‘사유’가 말을 겁니다.<br>설치 없이 이 페이지에서 바로 시작합니다. 소리를 켜 주세요.</p>
+
+    <h2>판 고르기</h2>
+    <ul>
+      <li>
+        <a class="card" href="오리지널/">
+          <span class="name">사유자의 시련</span>
+          <span class="meta">오리지널 · 약 30분</span>
+          <span class="desc">흙을 쓸고, 조각을 붙이고, 쇳물을 부으며 사유가 겪은 여섯 시련을 손끝으로 겪습니다.</span>
+          <span class="go" aria-hidden="true">시작하기</span>
+        </a>
+      </li>
+      <li>
+        <a class="card" href="시각장애인판/">
+          <span class="name">소리로 만나는 판</span>
+          <span class="meta">시각장애인판 · 약 11분 · 화면 낭독기 지원</span>
+          <span class="desc">화면을 보지 않아도 소리와 진동, 단추 한 번씩으로 끝까지 갑니다. 이어폰을 끼면 왼쪽·오른쪽 소리가 잘 들립니다.</span>
+          <span class="go" aria-hidden="true">시작하기</span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="note">파일이 커서(약 35~41MB) 처음 열 때 몇 초에서 수십 초 걸릴 수 있습니다. 와이파이에서 여는 것을 권합니다.</p>
+  </main>
+  <footer>
+    <p>오규태 · 공현민 · 이건혁 · Zhiqiang Shen<br>은유 장면 Higgsfield(Seedance) · 목소리와 화면 해설 Gemini TTS</p>
+  </footer>
+</body>
+</html>
